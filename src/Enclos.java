@@ -68,7 +68,6 @@ public class Enclos {
     }
     public boolean ajouterAnimal(Animal[] animaux){
         int nbAnimauxAttendue = animaux.length + nbAnimaux;
-
         for (Animal animal : animaux) {
             if (animal.getFamille().equals(this.famille)) {
                 ajouterAnimal(animal);
