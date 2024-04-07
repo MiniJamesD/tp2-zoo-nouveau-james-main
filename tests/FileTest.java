@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+/*
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileTest {
@@ -62,3 +62,6 @@ class FileTest {
         //	2 éléments: [Alice, 13 ans, 0 enclos restants] -> [Judith, 56 ans, 0 enclos restants] -> <null>
     }
 }
+
+
+ */

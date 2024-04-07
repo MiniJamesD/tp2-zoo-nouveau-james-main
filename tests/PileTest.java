@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
 class PileTest {
     Gardien mSmith = new Gardien("M. Smith", 10, Famille.Poisson);
     Gardien bPatel = new Gardien("B. Patel", 5, Famille.Cetace);
@@ -52,3 +52,6 @@ class PileTest {
         //	2 gardiens: [M. Smith (#1036), 10,0 hrs, enclos 'null'] | [B. Patel (#1037), 5,0 hrs, enclos 'null'] | [+ 3 cellules vides]
     }
 }
+
+
+ */

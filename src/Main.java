@@ -34,7 +34,7 @@ public class Main {
         reptiles.ajouterAnimal(new Animal[] {monty, jaws});
         oiseaux.ajouterAnimal(new Animal[] {polly, apollo});
         mammiferes.ajouterAnimal(new Animal[] {simba, zara});
-
+/*
         // Création du zoo avec ses enclos
         granby = new Zoo("Granby", new Enclos[] {poissons, cetaces, reptiles, oiseaux, mammiferes});
 
@@ -114,5 +114,9 @@ public class Main {
         System.out.println();
         System.out.println(visiteur + " quitte l'enclos après " + tempsVisite + " minutes.");
         return tempsVisite;
+
+ */
     }
+
+
 }

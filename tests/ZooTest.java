@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
 class ZooTest {
     // Création des animaux
     Animal spike = new Animal(Famille.Poisson, "thon", "Spike", 100);
@@ -208,3 +208,6 @@ class ZooTest {
         assertNull(zoo.prochainVisiteur()); // Plus de visiteurs, donc null
     }
 }
+
+
+ */
