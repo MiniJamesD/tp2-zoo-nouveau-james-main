@@ -1,4 +1,4 @@
-public class Pile {
+public class Pile<T> {
 
 
 }

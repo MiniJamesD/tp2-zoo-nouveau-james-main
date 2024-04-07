@@ -1,2 +1,2 @@
-public class File {
+public class File<T> {
 }
