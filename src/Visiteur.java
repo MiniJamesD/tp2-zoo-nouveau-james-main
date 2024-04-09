@@ -13,9 +13,11 @@ public class Visiteur {
         this.especes = especes;
     }
     public void setEnclosChoisis(File<Enclos>enclosChoisis){
+        //TODO
 
     }
     public Enclos prochainEnclos(){
+        //TODO
         return null;
     }
 
