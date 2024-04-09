@@ -4,25 +4,33 @@ public class Visiteur {
     private String nom;
     private int age;
     private String[] especes;
-    private File EncloChoisis;
+    private FileEnclos encloChoisis;
     private int nbEnclosRestant = 0;
 
     public Visiteur (String nom, int age, String[] especes){
         this.nom = nom.trim();
         this.age = age;
         this.especes = especes;
+
     }
-    public void setEnclosChoisis(File<Enclos>enclosChoisis){
-        //TODO
+    public void setEnclosChoisis(FileEnclos enclosChoisis){
+        this.encloChoisis = enclosChoisis;
 
     }
     public Enclos prochainEnclos(){
         //TODO
-        return null;
+        if (encloChoisis.getNbElements() == 0) {
+            return null;
+        }
+
+        return encloChoisis.retirer().getValeur();
+
     }
+
+    //Todo methode pour connaitre le nombre d<enclo restant pour le toString
 
     @Override
     public String toString() {
-        return "[" + nom + ", " + age + " ans, " + nbEnclosRestant + "enclos restants]";
+        return "[" + nom + ", " + age + " ans, " + nbEnclosRestant + " enclos restants]";
     }
 }

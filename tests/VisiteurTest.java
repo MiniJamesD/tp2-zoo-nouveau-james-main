@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-/*
+
 class VisiteurTest {
     Enclos poissons = new Enclos(Famille.Poisson, "Les Poissons", 12);
     Enclos cetaces = new Enclos(Famille.Cetace, "Les Cétacés", 3);
@@ -18,7 +18,7 @@ class VisiteurTest {
     void prochainEnclos() {
         assertNull(alice.prochainEnclos()); // Pas d'enclos à visiter initialement, donc null
 
-        File<Enclos> enclos = new File<>(); //TODO Modifiez cette ligne pour utiliser votre classe File
+        FileEnclos enclos = new FileEnclos(); //TODO Modifiez cette ligne pour utiliser votre classe File
         enclos.ajouter(poissons);
         enclos.ajouter(cetaces);
         alice.setEnclosChoisis(enclos);
@@ -32,7 +32,7 @@ class VisiteurTest {
     void testToString() {
         assertEquals("[Alice, 13 ans, 0 enclos restants]", alice.toString());
 
-        File<Enclos> enclos = new File<>(); //TODO Modifiez cette ligne pour utiliser votre classe File
+        FileEnclos enclos = new FileEnclos(); //TODO Modifiez cette ligne pour utiliser votre classe File
         enclos.ajouter(poissons);
         enclos.ajouter(cetaces);
         alice.setEnclosChoisis(enclos);
@@ -42,4 +42,3 @@ class VisiteurTest {
 }
 
 
- */

@@ -7,7 +7,7 @@ Ce fichier ne sera pas utilisé lors de la correction, donc vos modifications ne
 // Classe principale pour simuler la gestion d'un zoo
 public class Main {
     private static Zoo granby;
-
+/*
     public static void main(String[] args) {
         // Création des animaux
         Animal spike = new Animal(Famille.Poisson, "thon", "Spike", 100);
@@ -34,7 +34,7 @@ public class Main {
         reptiles.ajouterAnimal(new Animal[] {monty, jaws});
         oiseaux.ajouterAnimal(new Animal[] {polly, apollo});
         mammiferes.ajouterAnimal(new Animal[] {simba, zara});
-/*
+
         // Création du zoo avec ses enclos
         granby = new Zoo("Granby", new Enclos[] {poissons, cetaces, reptiles, oiseaux, mammiferes});
 
@@ -115,8 +115,10 @@ public class Main {
         System.out.println(visiteur + " quitte l'enclos après " + tempsVisite + " minutes.");
         return tempsVisite;
 
- */
+
     }
 
 
+
+ */
 }

@@ -1,18 +1,17 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-/*
-import static org.junit.jupiter.api.Assertions.*;
 
-class FileTest {
+import static org.junit.jupiter.api.Assertions.*;
+class FileTestVisiteur {
     Visiteur alice = new Visiteur("Alice",13, new String[]{"saumon", "lion", "zèbre", "perroquet"} );
     Visiteur edith = new Visiteur("Judith" , 56, new String[]{"corbeau", "lion"});
     Visiteur robert = new Visiteur("Robert", 65, new String[]{"python"});
 
-    File<Visiteur> file; //TODO Modifiez cette ligne pour utiliser votre classe File
+    FileVisiteur file; //TODO Modifiez cette ligne pour utiliser votre classe File
 
     @BeforeEach
     void setUp() {
-        file = new File<>();
+        file = new FileVisiteur();
         file.ajouter(alice);
         file.ajouter(edith);
     }
@@ -23,7 +22,7 @@ class FileTest {
         assertTrue(file.contient(edith));
         assertFalse(file.contient(robert));
 
-        File<Visiteur> vide = new File<>(); //TODO Modifiez cette ligne pour utiliser votre classe File
+        FileVisiteur vide = new FileVisiteur(); //TODO Modifiez cette ligne pour utiliser votre classe File
         assertFalse(vide.contient(alice));
     }
 
@@ -64,4 +63,3 @@ class FileTest {
 }
 
 
- */

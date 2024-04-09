@@ -4,7 +4,7 @@ public class Zoo {
     private String nom;
     private Enclos[] enclos;
     private Pile<Gardien> pileGardiens;
-    private File<Visiteur> fileVisiteurs;
+    private FileVisiteur fileVisiteurs;
 
     public Zoo(String nom, Enclos[] enclos){
         this.nom = nom.trim();
