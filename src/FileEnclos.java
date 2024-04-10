@@ -68,13 +68,12 @@ public class FileEnclos {
         return premier;
     }
     public String toString(){
-        //TODO
-        System.out.print(" " + nbElement + " éléments: ");
-        for (NoeudEnclos courant = premier; courant != null; courant = courant.getSuivant()){
-            System.out.print(courant);
+        String str = " " + nbElement + " éléments: ";
 
+        for (NoeudEnclos courant = premier; courant != null; courant = courant.getSuivant()){
+            str += courant;
         }
-        return "";
+        return str;
     }
 
 }

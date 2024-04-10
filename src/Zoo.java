@@ -3,7 +3,7 @@ import java.util.Comparator;
 public class Zoo {
     private String nom;
     private Enclos[] enclos;
-    private Pile<Gardien> pileGardiens;
+    private Pile pileGardiens;
     private FileVisiteur fileVisiteurs;
 
     public Zoo(String nom, Enclos[] enclos){
@@ -28,7 +28,7 @@ public class Zoo {
         if (!g.assignerA(enclos)){
             return null;
         }
-
+        pileGardiens.push(g);
         return g;
     }
     public Gardien engagerGardien(String nom, double hrsExperience, Famille specialite){
@@ -53,6 +53,9 @@ public class Zoo {
 
     public Gardien renvoyerGardien(){
         //todo enlever le dernier gardien engagé
+        if (pileGardiens.peek().getEnclos().getNbGardiens() > 1){
+            pileGardiens.pop();
+        }
         return null;
     }
     public Pile getGardienDe(Enclos enclos){

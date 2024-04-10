@@ -5,7 +5,6 @@ public class Gardien {
     private Famille specialite;
     private double hrsExperience;
     private Enclos enclos;
-
     public Gardien(String nom, double hrsExperience, Famille specialite){
         id = generateurId + 1;
         generateurId++;
@@ -14,7 +13,6 @@ public class Gardien {
         this.specialite = specialite;
         enclos = null;
     }
-
     public void ajouterExperience(double minutes){
         hrsExperience += (minutes / 60);
     }
@@ -35,7 +33,6 @@ public class Gardien {
             enclos = null;
         }
     }
-
     @Override
     public String toString() {
         String str = "[" + nom + " (#" + id + "), " + hrsExperience + " hrs, enclos '";
@@ -46,7 +43,6 @@ public class Gardien {
             str+= enclos.getNom() + "']";
         return str;
     }
-
     public int getId() {
         return id;
     }
@@ -62,7 +58,6 @@ public class Gardien {
     public Enclos getEnclos() {
         return enclos;
     }
-
     public static void main(String[] args) {
         //Gardien James = new Gardien("James", 10, Famille.Mammifere);
        // Gardien William = new Gardien("William", 15, Famille.Poisson);

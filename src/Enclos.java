@@ -5,7 +5,6 @@ public class Enclos {
     private int nbAnimaux;
     private int capaciteMax;
     private Animal[] animaux;
-
     public Enclos(Famille famille, String nom, int capaciteMax){
         this.famille = famille;
         this.nom = nom.trim();
@@ -17,31 +16,21 @@ public class Enclos {
         this.animaux = tempo;
 
     }
-
     public Famille getFamille() {
         return famille;
     }
-
     public String getNom() {
         return nom;
     }
-
     public int getNbGardiens() {
         return nbGardiens;
     }
-
     public int getNbAnimaux() {
         return nbAnimaux;
     }
-
-    public int getCapaciteMax() {
-        return capaciteMax;
-    }
-
     public Animal[] getAnimaux() {
         return animaux;
     }
-
     public int augmenterGardiens(){
         nbGardiens++;
         return nbGardiens;
@@ -52,7 +41,6 @@ public class Enclos {
         }
         return nbGardiens;
     }
-
     public boolean ajouterAnimal(Animal animal){
         if (nbAnimaux == capaciteMax) {
             System.out.println("Capacité maximal déja atteinte l'animal n'est pas ajouté");
@@ -90,7 +78,6 @@ public class Enclos {
             System.out.println(animaux[i]);
         }
     }
-
     public static void main(String[] args) {
         Enclos mammifere = new Enclos(Famille.Mammifere,"Les Mammifere", 4);
 
