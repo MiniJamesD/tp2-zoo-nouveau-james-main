@@ -22,6 +22,9 @@ public class Visiteur {
         encloChoisis.retirer();
         return encloChoisis.getPremier().valeur;
     }
+    public int getAge(){
+        return age;
+    }
     @Override
     public String toString() {
         return "[" + nom + ", " + age + " ans, " + nbEnclosRestant + " enclos restants]";

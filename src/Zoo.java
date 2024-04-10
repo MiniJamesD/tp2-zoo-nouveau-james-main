@@ -9,6 +9,7 @@ public class Zoo {
     public Zoo(String nom, Enclos[] enclos){
         this.nom = nom.trim();
         this.enclos = enclos;
+        pileGardiens = new Pile();
     }
     public int getNbEnclos(){
         return enclos.length;
@@ -21,8 +22,6 @@ public class Zoo {
         return nbTotalAnimaux;
     }
     public Gardien engagerGardien(String nom, double hrsExperience, Famille specialite, Enclos enclos) {
-
-        // doit etre ajouter a la file
         //TODO
         Gardien g = new Gardien(nom, hrsExperience, specialite);
         if (!g.assignerA(enclos)){
@@ -52,18 +51,38 @@ public class Zoo {
     }
 
     public Gardien renvoyerGardien(){
-        //todo enlever le dernier gardien engagé
+
         if (pileGardiens.peek().getEnclos().getNbGardiens() > 1){
             pileGardiens.pop();
         }
         return null;
     }
-    public Pile getGardienDe(Enclos enclos){
-        //todo
-        return null;
+    public Pile getGardiensDe(Enclos enclos){
+
+        Pile temp = new Pile();
+        for (int i = 0; i < pileGardiens.getNbElements(); i++){
+            if (pileGardiens.get(i).getEnclos().equals(enclos)){
+                temp.push(pileGardiens.get(i));
+
+            }
+        }
+        return temp;
     }
     public double accueillirVisiteur(Visiteur visiteur){
-        return -1;
+        double prixTotal = (5.5 * getNbEnclos()) + getNbTotalAnimaux();
+
+        if (visiteur.getAge() <= 6){
+            prixTotal = 0;
+        }
+        else if (visiteur.getAge() >= 7 || visiteur.getAge() <= 13 || visiteur.getAge() >=65) {
+            prixTotal = (prixTotal / 2);
+        }
+
+
+
+        fileVisiteurs.ajouter(visiteur);
+
+        return prixTotal;
     }
     public Visiteur prochainVisiteur(){
         return null;
@@ -71,10 +90,15 @@ public class Zoo {
     public void afficherTout(){
         //todo
     }
+    public Enclos[] getEnclos() {
+        return enclos;
+    }
 
+    public Pile getPileGardiens() {
+        return pileGardiens;
+    }
 
-
-
-
-
+    public FileVisiteur getFileVisiteurs() {
+        return fileVisiteurs;
+    }
 }
