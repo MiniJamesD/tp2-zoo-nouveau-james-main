@@ -15,14 +15,14 @@ public class NoeudVisiteur {
     @Override
     public String toString() {
         String str = "";
-        str += valeur; // + " -> " ;
-        /*
+        str += valeur + " -> " ;
+
         if (suivant == null) {
 
            str += "<null>";
         }
 
-         */
+
         return str;
     }
 

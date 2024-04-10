@@ -22,6 +22,7 @@ public class Gardien {
             quitterEnclos();
             this.enclos = enclos;
             this.enclos.augmenterGardiens();
+            System.out.println("Le gardien " + nom + " (#" + id + ") " + "a été assigné à l'enclos '" + enclos.getNom() + "' (" + enclos.getNbGardiens() + " gardiens)." );
             return true;
         }
 

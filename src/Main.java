@@ -3,7 +3,7 @@
 NE MODIFIEZ PAS LE RESTE DE CE FICHIER! (sauf pour mettre certaines sections en commentaire le temps de tester votre code)
 Ce fichier ne sera pas utilisé lors de la correction, donc vos modifications ne seront pas prises en compte.
 */
-/*
+
 // Classe principale pour simuler la gestion d'un zoo
 public class Main {
     private static Zoo granby;
@@ -125,4 +125,4 @@ public class Main {
 
 
 
- */
+

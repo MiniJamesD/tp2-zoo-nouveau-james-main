@@ -1,1 +1,0 @@
-Lorsque vous exécuterez la configuration "Main" dans IntelliJ, la sortie sera automatiquement redirigée dans ce fichier.

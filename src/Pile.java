@@ -18,6 +18,8 @@ public class Pile {
     }
     public Gardien pop(){
         --nbElement;
+        gardiens[nbElement].getEnclos().diminuerGardiens();
+
         return gardiens[nbElement];
     }
 
@@ -44,5 +46,14 @@ public class Pile {
             }
         }
         return str;
+    }
+
+    public boolean estVide() {
+        if (nbElement > 1){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

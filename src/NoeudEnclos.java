@@ -15,14 +15,7 @@ public class NoeudEnclos {
     @Override
     public String toString() {
         String str = "";
-        str += valeur; // + " -> " ;
-        /*
-        if (suivant == null) {
-
-           str += "<null>";
-        }
-
-         */
+        str += valeur;
         return str;
     }
 

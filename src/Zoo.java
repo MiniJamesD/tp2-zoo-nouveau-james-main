@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.Comparator;
 public class Zoo {
     private String nom;
     private Enclos[] enclos;
@@ -10,8 +8,9 @@ public class Zoo {
         this.nom = nom.trim();
         this.enclos = enclos;
         pileGardiens = new Pile();
+        fileVisiteurs = new FileVisiteur();
     }
-    public int getNbEnclos(){
+    public int getNbEnclos() {
         return enclos.length;
     }
     public int getNbTotalAnimaux(){
@@ -22,7 +21,7 @@ public class Zoo {
         return nbTotalAnimaux;
     }
     public Gardien engagerGardien(String nom, double hrsExperience, Famille specialite, Enclos enclos) {
-        //TODO
+
         Gardien g = new Gardien(nom, hrsExperience, specialite);
         if (!g.assignerA(enclos)){
             return null;
@@ -31,29 +30,31 @@ public class Zoo {
         return g;
     }
     public Gardien engagerGardien(String nom, double hrsExperience, Famille specialite){
-
-        Gardien g = new Gardien(nom,hrsExperience,specialite);
-        int[] choixPossible = new int[enclos.length];
-        int nbChoixPossible = 0;
         int j = 0;
-        for (int i = 0; i < enclos.length; i++) {
-            if (specialite.equals(enclos[i].getFamille())){
-                choixPossible[j] = enclos[i].getNbGardiens();
-                j++; nbChoixPossible++;
+        Enclos tempo = null;
+
+        for (Enclos i: enclos) {
+            if (i.getFamille().equals(specialite)) {
+                if (j == 0) { j = i.getNbGardiens();
+                }
+                if (j > i.getNbGardiens()) {
+                    j = i.getNbGardiens();
+                    tempo = i;
+                    System.out.println(tempo);
+                }
             }
         }
-        //todo
-        Arrays.sort(choixPossible);
-
-
-
-        return null;
+        if (tempo == null) {
+            return null;
+        }
+        return engagerGardien(nom, hrsExperience, specialite, tempo);
     }
 
     public Gardien renvoyerGardien(){
 
         if (pileGardiens.peek().getEnclos().getNbGardiens() > 1){
-            pileGardiens.pop();
+
+            return pileGardiens.pop();
         }
         return null;
     }
@@ -74,21 +75,39 @@ public class Zoo {
         if (visiteur.getAge() <= 6){
             prixTotal = 0;
         }
-        else if (visiteur.getAge() >= 7 || visiteur.getAge() <= 13 || visiteur.getAge() >=65) {
+        else if (visiteur.getAge() >= 7) {
+            prixTotal = (prixTotal / 2);
+        }
+        else if (visiteur.getAge() <= 13){
+            prixTotal = (prixTotal / 2);
+        }
+        else if (visiteur.getAge() >=65){
             prixTotal = (prixTotal / 2);
         }
 
 
-
         fileVisiteurs.ajouter(visiteur);
-
+        System.out.println(visiteur + "Entre dans le zoo.");
         return prixTotal;
     }
     public Visiteur prochainVisiteur(){
-        return null;
+        if (fileVisiteurs.getNbElements() == 0){
+            return null;
+        }
+        fileVisiteurs.retirer();
+        return fileVisiteurs.getPremier().valeur;
     }
     public void afficherTout(){
-        //todo
+        System.out.println("Bienvenu au zoo de " + nom + "! \nVoici la pile des gardiens");
+        System.out.println("    " + pileGardiens);
+        System.out.println("Et la file des visiteurs:");
+        System.out.println("    " + fileVisiteurs);
+        System.out.println("Le zoo est peuplé par " + getNbTotalAnimaux() + " animaux répartis dans " + getNbEnclos() + " enclos:");
+        for (int i = 0; i < getNbEnclos(); i++) {
+            enclos[i].afficherEnclos();
+            System.out.println("Il y a " + enclos[i].getNbGardiens() + " gardien(s) assignés à cet enclos.");
+        }
+
     }
     public Enclos[] getEnclos() {
         return enclos;
@@ -101,4 +120,5 @@ public class Zoo {
     public FileVisiteur getFileVisiteurs() {
         return fileVisiteurs;
     }
+
 }

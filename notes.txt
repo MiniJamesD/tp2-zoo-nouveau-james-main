@@ -1,3 +1,0 @@
-Pour le résultat final changé les points par des virgules (souf)
-
-Dans la class Gardien changer l'heure d'expériences pour un chiffre apres la virgule.
